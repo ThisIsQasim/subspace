@@ -1,7 +1,7 @@
 # Subspace - A simple WireGuard VPN server GUI
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-21-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![](https://images.microbadger.com/badges/image/subspacecommunity/subspace.svg)](https://microbadger.com/images/subspacecommunity/subspace "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/subspacecommunity/subspace.svg)](https://microbadger.com/images/subspacecommunity/subspace "Get your own version badge on microbadger.com")
@@ -97,7 +97,7 @@ $ subspace --http-host subspace.example.com
 |      flag       | default | description                                                                                                               |
 | :-------------: | :-----: | :------------------------------------------------------------------------------------------------------------------------ |
 |   `http-host`   |         | REQUIRED: The host to listen on and set cookies for                                                                       |
-|   `backlink`    |   `/`   | OPTIONAL: The page to set the home button too                                                                             |
+|   `backlink`    |   `/`   | OPTIONAL: The page to set the home button to                                                                              |
 |    `datadir`    | `/data` | OPTIONAL: The directory to store data such as the wireguard configuration files                                           |
 |     `debug`     |         | OPTIONAL: Place subspace into debug mode for verbose log output                                                           |
 |   `http-addr`   |  `:80`  | OPTIONAL: HTTP listen address                                                                                             |
@@ -115,7 +115,6 @@ $ subspace --http-host subspace.example.com
 The container expects WireGuard to be installed on the host. The official image is `subspacecommunity/subspace`.
 
 ```bash
-add-apt-repository -y ppa:wireguard/wireguard
 apt-get update
 apt-get install -y wireguard
 
@@ -152,6 +151,8 @@ sysctl -w net.ipv6.conf.all.forwarding=1
 Follow the official Docker install instructions: [Get Docker CE for Ubuntu](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/)
 
 Make sure to change the `--env SUBSPACE_HTTP_HOST` to your publicly accessible domain name.
+
+If you want to run the vpn on a different domain as the http host you can set `--env SUBSPACE_ENDPOINT_HOST`
 
 ```bash
 
@@ -259,6 +260,17 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://blog.selvakn.in"><img src="https://avatars.githubusercontent.com/u/30524?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Selva</b></sub></a><br /><a href="https://github.com/subspacecommunity/subspace/commits?author=selvakn" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/syphernl"><img src="https://avatars.githubusercontent.com/u/639906?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Frank</b></sub></a><br /><a href="https://github.com/subspacecommunity/subspace/commits?author=syphernl" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/gianlazz"><img src="https://avatars.githubusercontent.com/u/1166579?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gian Lazzarini</b></sub></a><br /><a href="https://github.com/subspacecommunity/subspace/commits?author=gianlazz" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://nhamlh.space"><img src="https://avatars.githubusercontent.com/u/11173217?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nham Le</b></sub></a><br /><a href="https://github.com/subspacecommunity/subspace/commits?author=nhamlh" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/sinanmohd"><img src="https://avatars.githubusercontent.com/u/69694713?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sinan Mohd</b></sub></a><br /><a href="https://github.com/subspacecommunity/subspace/commits?author=sinanmohd" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="http://www.sigginet.info"><img src="https://avatars.githubusercontent.com/u/1608474?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sigurður Guðbrandsson</b></sub></a><br /><a href="https://github.com/subspacecommunity/subspace/commits?author=SGudbrandsson" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/vojta7"><img src="https://avatars.githubusercontent.com/u/10436347?v=4?s=100" width="100px;" alt=""/><br /><sub><b>vojta7</b></sub></a><br /><a href="https://github.com/subspacecommunity/subspace/commits?author=vojta7" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/d3473r"><img src="https://avatars.githubusercontent.com/u/10356892?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Fabian</b></sub></a><br /><a href="https://github.com/subspacecommunity/subspace/commits?author=d3473r" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://miki725.com"><img src="https://avatars.githubusercontent.com/u/932940?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Miroslav Shubernetskiy</b></sub></a><br /><a href="https://github.com/subspacecommunity/subspace/commits?author=miki725" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/dovreshef"><img src="https://avatars.githubusercontent.com/u/5120549?v=4?s=100" width="100px;" alt=""/><br /><sub><b>dovreshef</b></sub></a><br /><a href="https://github.com/subspacecommunity/subspace/commits?author=dovreshef" title="Code">💻</a></td>
+    <td align="center"><a href="https://freek.ws/"><img src="https://avatars.githubusercontent.com/u/1370857?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Freekers</b></sub></a><br /><a href="https://github.com/subspacecommunity/subspace/commits?author=Freekers" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Coffeeri"><img src="https://avatars.githubusercontent.com/u/8344540?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Leander</b></sub></a><br /><a href="https://github.com/subspacecommunity/subspace/commits?author=Coffeeri" title="Documentation">📖</a></td>
   </tr>
 </table>
 
